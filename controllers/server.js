@@ -29,10 +29,7 @@ class Server {
     }
 
     routes() {
-        this.app.get('/api', (req,res) => {
-            res.send('reviando');
-        });
-        // this.app.use( this.usuariosPath, require('../routes/usuarios'));
+        this.app.use( this.usuariosPath, require('../routes/usuarios'));
     }
 
     listen() {
